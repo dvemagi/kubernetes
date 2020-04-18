@@ -4,7 +4,7 @@ metadata:
   name: nginx-load-balancer02
 spec:
   selector:
-    app: nginx
+    app: nginx02
   ports:
     - protocol: TCP
       port: 80
