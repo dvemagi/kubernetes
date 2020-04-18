@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-load-balancer
+  name: nginx-load-balancer-https
 spec:
   selector:
     app: nginx
