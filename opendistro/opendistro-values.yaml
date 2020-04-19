@@ -15,7 +15,7 @@ elasticsearch:
       enabled: true
       accessModes:
         - ReadWriteOnce
-      size: 12Gi
+      size: 20Gi
       annotations: {}
 
     javaOpts: "-Xms1g -Xmx4g"
