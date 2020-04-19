@@ -7,7 +7,7 @@ elasticsearch:
   ## Default {{ template opendistro-es.fullname }}-discovery.
   master:
     enabled: true
-    replicas: 2
+    replicas: 1
     ## Enable persistence using Persistent Volume Claims
     ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
     ##
@@ -18,7 +18,7 @@ elasticsearch:
       size: 12Gi
       annotations: {}
 
-    javaOpts: "-Xms512m -Xmx4g"
+    javaOpts: "-Xms1g -Xmx4g"
     
 
   data:
@@ -38,12 +38,12 @@ elasticsearch:
       size: 50Gi
       annotations: {}
 
-    javaOpts: "-Xms512m -Xmx4g"
+    javaOpts: "-Xms1g -Xmx4g"
    
 
   client:
     enabled: true
     replicas: 2
-    javaOpts: "-Xms512m -Xmx4g"
+    javaOpts: "-Xms1g -Xmx4g"
    
     
