@@ -1,0 +1,28 @@
+kibana:
+  enabled: true
+  replicas: 1
+
+elasticsearch:
+  ## Used when deploying hot/warm architecture. Allows second aliased deployment to find cluster.
+  ## Default {{ template opendistro-es.fullname }}-discovery.
+  master:
+    enabled: true
+    replicas: 2
+
+    javaOpts: "-Xms2g -Xmx2g"
+    
+
+  data:
+    enabled: true
+    replicas: 2
+
+
+    javaOpts: "-Xms2g -Xmx2g"
+   
+
+  client:
+    enabled: true
+    replicas: 2s
+    javaOpts: "-Xms2g -Xmx2g"
+   
+    
