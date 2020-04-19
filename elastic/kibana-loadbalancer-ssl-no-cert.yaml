@@ -5,8 +5,8 @@ metadata:
   name: elk-test-01-kibana-lb
 spec: 
   selector:
-    app: kibana
-    release: elk-test-01
+    app.kubernetes.io/instance: elk-test-01-kibana
+    app.kubernetes.io/name: kibana
   ports:
     - protocol: TCP
       port: 5601
