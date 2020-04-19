@@ -22,7 +22,7 @@ elasticsearch:
 
   client:
     enabled: true
-    replicas: 2s
+    replicas: 2
     javaOpts: "-Xms2g -Xmx2g"
    
     
