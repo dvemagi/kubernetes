@@ -1,0 +1,15 @@
+apiVersion: v1
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubernetes-dashboard-lb-ssl
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:076655312027:certificate/2168cc9b-109d-4965-8b58-87ea4b276404
+spec: 
+  selector:
+    k8s-app: kubernetes-dashboard
+  ports:
+    - protocol: TCP
+      port: 443
+      targetPort: 8443
+  type: LoadBalancer
