@@ -5,7 +5,7 @@ metadata:
   name: elk-test-01-elastic-lb
 spec: 
   selector:
-    app: kibana
+    app: elasticsearch
     release: elk-test-01-elastic
     role: coordinating-only
   ports:
