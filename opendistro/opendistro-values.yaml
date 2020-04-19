@@ -1,0 +1,51 @@
+kibana:
+  enabled: true
+  replicas: 1
+
+elasticsearch:
+  ## Used when deploying hot/warm architecture. Allows second aliased deployment to find cluster.
+  ## Default {{ template opendistro-es.fullname }}-discovery.
+  master:
+    enabled: true
+    replicas: 2
+
+    ## Enable persistence using Persistent Volume Claims
+    ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+    ##
+    persistence:
+      enabled: true
+  
+      accessModes:
+        - ReadWriteOnce
+      size: 12Gi
+      annotations: {}
+
+    javaOpts: "-Xms2g -Xmx2g"
+    
+
+  data:
+    enabled: true
+    replicas: 2
+
+    persistence:
+      enabled: true
+  
+      ## The subdirectory of the volume to mount to, useful in dev environments
+      ## and one PV for multiple services.
+      ##
+      subPath: ""
+
+      accessModes:
+        - ReadWriteOnce
+      size: 50Gi
+      annotations: {}
+
+    javaOpts: "-Xms2g -Xmx2g"
+   
+
+  client:
+    enabled: true
+    replicas: 2
+    javaOpts: "-Xms2g -Xmx2g"
+   
+    
