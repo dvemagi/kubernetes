@@ -18,7 +18,7 @@ elasticsearch:
       size: 20Gi
       annotations: {}
 
-    javaOpts: "-Xms1g -Xmx4g"
+    javaOpts: "-Xms4g -Xmx4g"
     
 
   data:
@@ -38,12 +38,12 @@ elasticsearch:
       size: 50Gi
       annotations: {}
 
-    javaOpts: "-Xms1g -Xmx4g"
+    javaOpts: "-Xms4g -Xmx4g"
    
 
   client:
     enabled: true
     replicas: 2
-    javaOpts: "-Xms1g -Xmx4g"
+    javaOpts: "-Xms4g -Xmx4g"
    
     
