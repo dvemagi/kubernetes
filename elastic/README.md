@@ -24,7 +24,9 @@ obbligatori
 
 Load balancer per elasticsearch
 > kubectl -n **namespace** apply -f elastic-loadbalancer.yaml
+
 attenzione a cambiare nel selector il parametro **release** che è uguale al nome dato dalla release di helm
 
 > kubectl -n **namespace** apply -f kibana-loadbalancer.yaml
+
 attenzione a cambiare nel selector il parametro **app.kubernetes.io/instance** che è uguale al nome dato dalla release di helm
