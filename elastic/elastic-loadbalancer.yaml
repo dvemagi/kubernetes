@@ -1,0 +1,15 @@
+apiVersion: v1
+apiVersion: v1
+kind: Service
+metadata:
+  name: elk-test-01-elastic-lb
+spec: 
+  selector:
+    app: kibana
+    release: elk-test-01-elastic
+    role: coordinating-only
+  ports:
+    - protocol: TCP
+      port: 9200
+      targetPort: 9200
+  type: LoadBalancer
