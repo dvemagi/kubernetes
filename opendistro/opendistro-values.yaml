@@ -7,7 +7,7 @@ elasticsearch:
   ## Default {{ template opendistro-es.fullname }}-discovery.
   master:
     enabled: true
-    replicas: 1
+    replicas: 2
     ## Enable persistence using Persistent Volume Claims
     ## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
     ##
