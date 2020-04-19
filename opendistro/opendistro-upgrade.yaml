@@ -9,7 +9,7 @@ elasticsearch:
     enabled: true
     replicas: 2
 
-    javaOpts: "-Xms2g -Xmx2g"
+    javaOpts: "-Xms512m -Xmx4g"
     
 
   data:
@@ -17,12 +17,12 @@ elasticsearch:
     replicas: 2
 
 
-    javaOpts: "-Xms2g -Xmx2g"
+    javaOpts: "-Xms512m -Xmx4g"
    
 
   client:
     enabled: true
     replicas: 2
-    javaOpts: "-Xms2g -Xmx2g"
+    javaOpts: "-Xms512m -Xmx4g"
    
     
