@@ -9,6 +9,6 @@ spec:
     app.kubernetes.io/name: kibana
   ports:
     - protocol: TCP
-      port: 5601
-      targetPort: 5601
+      port: 80
+      targetPort: 80
   type: LoadBalancer
