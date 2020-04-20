@@ -8,7 +8,7 @@ metadata:
 spec: 
   selector:
     role: kibana
-    app: opendistro-opendistro-es
+    app: opendistro-es-1-1587385966
   ports:
     - protocol: TCP
       port: 5601

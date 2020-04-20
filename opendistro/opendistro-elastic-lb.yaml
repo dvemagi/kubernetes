@@ -8,7 +8,7 @@ metadata:
 spec: 
   selector:
     role: client
-    app: opendistro-opendistro-es
+    app: opendistro-es-1-1587385966
 spec: 
   selector:
     app: elasticsearch
