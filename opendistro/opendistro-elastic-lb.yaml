@@ -9,10 +9,6 @@ spec:
   selector:
     role: client
     app: opendistro-es-1-1587385966
-spec: 
-  selector:
-    app: elasticsearch
-    role: client
   ports:
     - protocol: TCP
       port: 9200
