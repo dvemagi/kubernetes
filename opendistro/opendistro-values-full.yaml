@@ -37,10 +37,10 @@ kibana:
 
   ssl:
     kibana:
-      enabled: false
+      enabled: true
       existingCertSecret:
     elasticsearch:
-      enabled: false
+      enabled: enable
       existingCertSecret:
 
 
@@ -146,15 +146,15 @@ elasticsearch:
     transport:
       existingCertSecret:
     rest:
-      enabled: false
+      enabled: true
       existingCertSecret:
     admin:
-      enabled: true
+      enabled: false
       existingCertSecret:
 
   master:
     enabled: true
-    replicas: 3
+    replicas: 2
     updateStrategy: "RollingUpdate"
 
     ## Enable persistence using Persistent Volume Claims
@@ -217,7 +217,7 @@ elasticsearch:
 
   data:
     enabled: true
-    replicas: 3
+    replicas: 2
     updateStrategy: "RollingUpdate"
 
     ## Enable persistence using Persistent Volume Claims
