@@ -40,7 +40,7 @@ kibana:
       enabled: true
       existingCertSecret:
     elasticsearch:
-      enabled: enable
+      enabled: false
       existingCertSecret:
 
 
@@ -146,7 +146,7 @@ elasticsearch:
     transport:
       existingCertSecret:
     rest:
-      enabled: true
+      enabled: false
       existingCertSecret:
     admin:
       enabled: false
