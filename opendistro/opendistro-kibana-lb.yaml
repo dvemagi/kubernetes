@@ -2,13 +2,13 @@ apiVersion: v1
 apiVersion: v1
 kind: Service
 metadata:
-  name: opendistro-kibana-lb
+  name: od-cust01-opendistro-kibana-lb
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:076655312027:certificate/2168cc9b-109d-4965-8b58-87ea4b276404
 spec: 
   selector:
     role: kibana
-    app: opendistro-es-1-1587385966
+    release: od-cust01
   ports:
     - protocol: TCP
       port: 5601
