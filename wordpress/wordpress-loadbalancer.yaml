@@ -11,9 +11,11 @@ spec:
     app.kubernetes.io/name: wordpress
   ports:
     - protocol: TCP
+      name: https
       port: 443
       targetPort: 443
     - protocol: TCP
+      name: http
       port: 80
       targetPort: 80
   type: LoadBalancer
