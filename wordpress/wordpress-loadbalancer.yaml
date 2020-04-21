@@ -10,12 +10,12 @@ spec:
     app.kubernetes.io/instance: ics-wptest
     app.kubernetes.io/name: wordpress
   ports:
-    - protocol: TCP
-      name: https
+    - name: https
       port: 443
-      targetPort: 8443
-    - protocol: TCP
-      name: http
+      targetPort: 443
+    - name: http
       port: 80
-      targetPort: 8080
+      targetPort: 80
   type: LoadBalancer
+
+
