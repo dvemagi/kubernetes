@@ -1,21 +1,37 @@
 
-To access your WordPress site from outside the cluster follow the steps below:
+# Deploy wordpress
 
-1. Get the WordPress URL by running these commands:
+helm install -n [namespace] bitnami/wordpress --generate-name
+la procedura nella prima riga restituisce il nome del deploy
 
-  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
-        Watch the status with: 'kubectl get svc --namespace ics-wptest -w ics-test-wordpress'
+al termine della procedura lanciare il comando 
+kubectl get secret --namespace [namespace] [nome-deploy] -o jsonpath="{.data.wordpress-password}" | base64 --decode
 
-   export SERVICE_IP=$(kubectl get svc --namespace ics-wptest ics-test-wordpress --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}")
-   echo "WordPress URL: http://$SERVICE_IP/"
-   echo "WordPress Admin URL: http://$SERVICE_IP/admin"
+che restituisce la password di di amministrazione (utente user)
 
-2. Open a browser and access WordPress using the obtained URL.
+lanciare il comando
 
-3. Login with the following credentials below to see your blog:
+kubectl -n [namespace] get all
 
-  echo Username: user
-  echo Password: $(kubectl get secret --namespace ics-wptest ics-test-wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
+annotarsi il numero del loadbalancer
 
 
-OH2Oqpu6dx
+### Creazione o modifica del loadbalancer
+#### Modifica 
+
+Aprire da console il loadbalancer
+editare i listener
+mettere il listener per ssl con **load balanceer protocol** HTTPS su 443 instance protocol HTTP sulla porta del HTTP e poi scegliere il certificato
+
+#### Creazione
+
+modificare il file modificando il parametro
+
+**app.kubernetes.io/instance:** con il nome del deploy
+**service.beta.kubernetes.io/aws-load-balancer-ssl-cert:** inserendo ARN del certificato
+
+kubectl -n [namespace] apply -f wordpress-loadbalancer.yaml
+
+
+
+
