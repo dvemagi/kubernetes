@@ -37,7 +37,7 @@ kibana:
 
   ssl:
     kibana:
-      enabled: true
+      enabled: false
       existingCertSecret:
     elasticsearch:
       enabled: false
