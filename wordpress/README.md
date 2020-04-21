@@ -5,7 +5,7 @@ helm install -n [namespace] bitnami/wordpress --generate-name
 la procedura nella prima riga restituisce il nome del deploy
 
 al termine della procedura lanciare il comando 
-kubectl get secret --namespace [namespace] [nome-deploy] -o jsonpath="{.data.wordpress-password}" | base64 --decode
+"kubectl get secret --namespace [namespace] [nome-deploy] -o jsonpath="{.data.wordpress-password}" | base64 --decode"
 
 che restituisce la password di di amministrazione (utente user)
 
@@ -30,7 +30,7 @@ modificare il file modificando il parametro
 **app.kubernetes.io/instance:** con il nome del deploy
 **service.beta.kubernetes.io/aws-load-balancer-ssl-cert:** inserendo ARN del certificato
 
-kubectl -n [namespace] apply -f wordpress-loadbalancer.yaml
+"kubectl -n [namespace] apply -f wordpress-loadbalancer.yaml"
 
 
 
