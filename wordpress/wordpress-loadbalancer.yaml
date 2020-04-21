@@ -15,5 +15,5 @@ spec:
       targetPort: 443
     - protocol: TCP
       port: 80
-      targetport: 80
+      targetPort: 80
   type: LoadBalancer
