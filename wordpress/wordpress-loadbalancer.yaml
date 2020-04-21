@@ -10,7 +10,7 @@ metadata:
 
 spec: 
   selector:
-    app.kubernetes.io/instance: ics-wptest
+    app.kubernetes.io/instance: wp-cust01
     app.kubernetes.io/name: wordpress
   ports:
     - name: https
