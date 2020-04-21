@@ -154,7 +154,7 @@ elasticsearch:
 
   master:
     enabled: true
-    replicas: 2
+    replicas: 1
     updateStrategy: "RollingUpdate"
 
     ## Enable persistence using Persistent Volume Claims
