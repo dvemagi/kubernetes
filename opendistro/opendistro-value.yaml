@@ -17,7 +17,7 @@ kibana:
   imageTag: 1.6.0
   replicas: 1
   port: 5601
-  externalPort: 5601
+  externalPort: 443
   resources: {}
   #  limits:
   #    cpu: 2500m
@@ -193,7 +193,7 @@ elasticsearch:
     #  requests:
     #    cpu: 200m
     #    memory: 1024Mi
-    javaOpts: "-Xms1g -Xmx4g"
+    javaOpts: "-Xms2g -Xmx4g"
     podDisruptionBudget:
       enabled: false
       minAvailable: 1
@@ -256,7 +256,7 @@ elasticsearch:
     #  requests:
     #    cpu: 200m
     #    memory: 1024Mi
-    javaOpts: "-Xms1g -Xmx4g"
+    javaOpts: "-Xms2g -Xmx4g"
     podDisruptionBudget:
       enabled: false
       minAvailable: 1
@@ -300,7 +300,7 @@ elasticsearch:
         # # Annotation to create internal only ELB
         # service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
     replicas: 2
-    javaOpts: "-Xms1g -Xmx4g"
+    javaOpts: "-Xms2g -Xmx4g"
     ingress:
       ## Set to true to enable ingress record generation
       enabled: false
