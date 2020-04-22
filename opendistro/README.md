@@ -12,8 +12,9 @@ Nonostante quello che indica il default le opzioni di base non sono corrette (no
 per cui vanno aggiunte le seguenti opzioni
 
 ```
--- set elasticsearch.data.replicas=2
--- set elasticsearch.master.replicas=2
--- set elasticsearch.client.replicas=2
+--set elasticsearch.data.replicas=2
+--set elasticsearch.master.replicas=2
+--set elasticsearch.client.replicas=2
+--set elasticsearch.data.storage="50Gi"
 ```
 
