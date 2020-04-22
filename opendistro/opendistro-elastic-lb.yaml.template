@@ -6,13 +6,13 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:076655312027:certificate/2168cc9b-109d-4965-8b58-87ea4b276404
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: ssl
-#    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "https"
+#    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "ssl"
 spec: 
   selector:
     role: client
     release: {{helm_release}}
   ports:
-    - protocol: ssl
+    - protocol: TCP
       port: 9200
       targetPort: 9200
   type: LoadBalancer
