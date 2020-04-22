@@ -11,12 +11,12 @@ echo "elm release: $helm_release"
 template_elastic=`cat "opendistro-elastic-lb.yaml.template" | sed "s/{{helm_release}}/$helm_release/g"` 
 
 # effettuo il deploy del LB di elastic
-echo "$template_elastic" | kubectl -n "$namespace" apply -f -
+echo "$template_elastic" #| kubectl -n "$namespace" apply -f -
 
 # sostituisco il valore nel template LB di kibana
 template_kibana=`cat "opendistro-kibana-lb.yaml.template" | sed "s/{{helm_release}}/$helm_release/g"` 
 
 # effettuo il deploy del LB di elastic
-echo "$template_kibana" | kubectl -n "$namespace" apply -f -
+echo "$template_kibana" #| kubectl -n "$namespace" apply -f -
 
 
