@@ -22,10 +22,28 @@ Per il deploy in un namespace specifico
  > helm install opendistro-es-XXX-tgz -f [file-values.yaml] -n [namespace]
 
 
-```
---set elasticsearch.data.replicas=2
---set elasticsearch.master.replicas=2
---set elasticsearch.client.replicas=2
---set elasticsearch.data.storage="50Gi"
-```
+
+## Caratteristiche del file opendistro-values.yaml
+
+deploy dei seguenti container
+2 x Client Node
+1 x Master Node
+2 x Data Node
+1 x Kibana
+
+Dischi persistenti 
+10 GB per Master
+50 GB per Data 
+
+# Deploy automatico con load balancer per AWS
+
+Il file **opendistro-deploy.sh** effettua il deploy automatico usando opendistro-values.yaml con un nome generato e poi inizializza e collega due load balancer
+
+parametri
+-ssl arn del dertificato
+-n namespace
+
+> [nome-release]-kibana-lb sulla porta 5601 in ssl con il certificato passato
+> [nome-release]-elastic-lb sulla porta 9200 in ssl con il certificato passato
+
 
