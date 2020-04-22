@@ -1,6 +1,7 @@
 #!/bin/bash
 
-namespace="test"
+namespace="$1" 
+
 echo "namespace: $namespace"
 
 # Fa il deploy dei container e carica il nome della release nella variabile
