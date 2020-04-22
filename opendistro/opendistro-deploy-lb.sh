@@ -7,7 +7,7 @@
 helm_release=$1
 
 # sostituisco il valore nel template LB di elastic
-template=`cat "opendistro-elastic-lb.yml.template" | sed "s/{{helm_release}}/$helm_reelease/g"`
+template=`cat "opendistro-elastic-lb.yaml.template" | sed "s/{{helm_release}}/$helm_reelease/g"`
 
 # effettuo il deploy del LB di elastic
 echo "$template" 
