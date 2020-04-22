@@ -4,7 +4,7 @@ namespace="test"
 echo "namespace: $namespace"
 
 # Fa il deploy dei container e carica il nome della release nella variabile
-helm_release="helm -n $1 install opendistro-es-1.6.0.tgz --generate-name -f opendistro-values.yaml | awk '/NAME:/ { print $2 }' -"
+helm_release="helm -n $namespace install opendistro-es-1.6.0.tgz --generate-name -f opendistro-values.yaml | awk '/NAME:/ { print $2 }' -"
 echo "elm release: $helm_release"
 
 # sostituisco il valore nel template LB di elastic
