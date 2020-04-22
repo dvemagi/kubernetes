@@ -1,11 +1,6 @@
 #!/bin/bash
 
-namespace="$1"
-if  ["$namespace" = "" ]
-    then 
-        echo "Inserire in nome del namespace"
-        exit
-    fi
+namespace="test"
 
 # Fa il deploy dei container e carica il nome della release nella variabile
 helm_release="helm -n $1 install opendistro-es-1.6.0.tgz --generate-name -f opendistro-values.yaml | awk '/NAME:/ { print $2 }' -"
