@@ -1,0 +1,14 @@
+apiVersion: v1
+apiVersion: v1
+kind: Service
+metadata:
+  name: elk-test-01-kibana-lb
+spec: 
+  selector:
+    app.kubernetes.io/instance: elk-test-01-kibana
+    app.kubernetes.io/name: kibana
+  ports:
+    - protocol: TCP
+      port: 5601
+      targetPort: 5601
+  type: LoadBalancer

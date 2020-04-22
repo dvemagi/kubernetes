@@ -1,0 +1,17 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: ics-test-01
+  region: eu-west-1
+
+vpc:
+  cidr: 172.30.8.0/21
+  autoAllocateIPv6: false
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t3.medium
+    desiredCapacity: 2
+    ssh:
+      allow: true 
