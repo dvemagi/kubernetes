@@ -20,3 +20,4 @@ template=`cat "opendistro-kibana-lb.yaml.template" | sed "s/{{helm_release}}/$he
 # effettuo il deploy del LB di elastic
 echo "$template" | kubectl -n "$namespace" apply -f -
 
+
