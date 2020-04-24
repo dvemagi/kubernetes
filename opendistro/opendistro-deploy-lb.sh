@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -z $1 ] 
+    then
+        echo "Devi inserire come parametro il namespace"
+        exit 1
+fi
+
 namespace="$1" 
 
 echo "namespace: $namespace"
