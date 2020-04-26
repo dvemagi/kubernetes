@@ -1,0 +1,17 @@
+piVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kube-dash-ingress
+spec:
+  tls:
+  - hosts:
+    - kube-dash.icsdemo.cloud
+    secretName: cafe-secret
+  rules:
+  - host: cafe.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 8443
