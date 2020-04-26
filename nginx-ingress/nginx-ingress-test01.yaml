@@ -3,12 +3,13 @@ kind: Ingress
 metadata:
   name: kube-dash-ingress
   namespace: kubernetes-dashboard
+  nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: kube-dash.icsdemo.cloud
     http:
       paths:
-      - path: 
+      - path: /
         backend:
           serviceName: kubernetes-dashboard
           servicePort: 8443

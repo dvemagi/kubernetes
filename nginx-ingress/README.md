@@ -8,3 +8,11 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mast
 
 metodi altrenativi (usare ertificato di AWS)
 https://kubernetes.github.io/ingress-nginx/deploy/#aws
+
+
+ipotesi su medium
+https://medium.com/@Joachim8675309/adding-ingress-with-amazon-eks-6c4379803b2
+
+blog di AWS
+https://aws.amazon.com/premiumsupport/knowledge-center/eks-access-kubernetes-services/
+
