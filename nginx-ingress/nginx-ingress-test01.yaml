@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: kube-dash-ingress
   namespace: kubernetes-dashboard
-annotations:  
+annotations:
   nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
