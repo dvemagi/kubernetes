@@ -4,11 +4,8 @@ metadata:
   name: kube-dash-ingress
   namespace: kubernetes-dashboard
 spec:
-  tls:
-  - hosts:
-    - kube-dash.icsdemo.cloud
   rules:
-  - host: cafe.example.com
+  - host: kube-dash.icsdemo.cloud
     http:
       paths:
       - path: /
