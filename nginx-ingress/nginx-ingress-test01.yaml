@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: kube-dash-ingress
-  namespace: kubernetes-dashboard
+ #namespace: kubernetes-dashboard
 spec:
   rules:
   - host: kube-dash.icsdemo.cloud
@@ -10,5 +10,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: kubebernetes-dashboard
+          serviceName: kubernetes-dashboard
           servicePort: 443
