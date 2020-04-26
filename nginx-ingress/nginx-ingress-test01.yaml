@@ -6,7 +6,6 @@ spec:
   tls:
   - hosts:
     - kube-dash.icsdemo.cloud
-    secretName: cafe-secret
   rules:
   - host: cafe.example.com
     http:
