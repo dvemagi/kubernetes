@@ -8,7 +8,7 @@ spec:
   - host: kube-dash.icsdemo.cloud
     http:
       paths:
-      - path: /
+      - path: 
         backend:
           serviceName: kubernetes-dashboard
           servicePort: 8443
