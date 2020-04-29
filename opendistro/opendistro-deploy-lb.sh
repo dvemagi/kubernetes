@@ -5,7 +5,7 @@ namespace="od-ics-test"
 # Fa il deploy dei container
 #helm -n "$1" install opendistro-es-1.6.0.tgz --generate-name -f opendistro-values.yaml
 
-# prendo il nome della release
+git pull# prendo il nome della release
 helm_release="$1"
 
 # sostituisco il valore nel template LB di elastic
