@@ -4,6 +4,7 @@ metadata:
   name: rancher-lb-https
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:076655312027:certificate/2168cc9b-109d-4965-8b58-87ea4b276404
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
 spec: 
   selector:
     app: rancher
@@ -11,5 +12,5 @@ spec:
   ports:
     - protocol: TCP
       port: 443
-      targetPort: 443
+      targetPort: 80
   type: LoadBalancer
