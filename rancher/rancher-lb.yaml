@@ -7,7 +7,7 @@ metadata:
 spec: 
   selector:
     app: rancher
-    pod-template-hash: 5956785466
+    pod-template-hash: "5956785466"
   ports:
     - protocol: TCP
       port: 443
